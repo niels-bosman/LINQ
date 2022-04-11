@@ -31,4 +31,3 @@ Console.Clear();
 // Resultaat tonen
 Console.WriteLine(example.Description);
 GameTableGenerator.Generate(filteredList);
-

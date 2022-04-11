@@ -13,7 +13,7 @@ public class GameTableGenerator
         PrintLine();
         foreach (var game in games)
         {
-            PrintRow(game.Name, game.Genre, game.ReleaseYear.ToString(), game.GameStudio, game.Sales.ToString());
+            PrintRow(game.Name, game.Genre, game.ReleaseYear.ToString(), game.GameStudio, game.Sales.ToString("N0"));
         }
         PrintLine();
         Console.ReadLine();

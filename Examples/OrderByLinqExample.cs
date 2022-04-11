@@ -4,7 +4,7 @@ namespace LINQ.Examples;
 
 public class OrderByLinqExample : ILinqExample
 {
-    public string? Description => "We orderen de lijst van games op basis van de hoeveelheid sales";
+    public string Description => "We sorteren de lijst van games op basis van de hoeveelheid sales";
     
     public List<Game> WithQuery(List<Game> games)
     {

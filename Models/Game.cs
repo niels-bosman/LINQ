@@ -8,9 +8,4 @@ public class Game
     public string? GameStudio { get; set; }
     public int Sales { get; set; }
     public List<Platform>? Platforms { get; set; }
-
-    public void ToTable()
-    {
-        Console.Write($"|{Name,5}|{Genre,5}|{ReleaseYear,5}|{Sales,5}\n");
-    }
 }
