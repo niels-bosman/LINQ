@@ -29,7 +29,7 @@ public class SelectLinqExample : LinqExample
     {
         foreach (var sale in sales)
         {
-            Console.WriteLine(sale);
+            Console.WriteLine(sale.ToString("N0"));
         }
     }
 }
