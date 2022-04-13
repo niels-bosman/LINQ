@@ -1,26 +1,28 @@
-﻿using System.Collections;
-using LINQ.Models;
+﻿using LINQ.Models;
 
 namespace LINQ.Examples;
 
-public class WhereLinqExample : ILinqExample
+public class WhereLinqExample : LinqExample
 {
-    public string Description => "We filteren de games die nieuwe zijn dan 2017";
+    protected override string Description => "We filteren de games die nieuwe zijn dan 2017";
 
-    public List<Game> WithQuery(List<Game> games)
+    protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var result = 
+        var list = (
             from game in games
             where game.ReleaseYear > 2017
-            select game;
+            select game
+        ).ToList();
 
-        return result.ToList();
+        DisplayData(list);
     }
 
-    public List<Game> WithMethod(List<Game> games)
+    protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        return games
+        var list = games
             .Where(game => game.ReleaseYear > 2017)
             .ToList();
+
+        DisplayData(list);
     }
 }

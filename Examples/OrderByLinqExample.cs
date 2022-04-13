@@ -2,24 +2,28 @@
 
 namespace LINQ.Examples;
 
-public class OrderByLinqExample : ILinqExample
+public class OrderByLinqExample : LinqExample
 {
-    public string Description => "We sorteren de lijst van games op basis van de hoeveelheid sales";
-    
-    public List<Game> WithQuery(List<Game> games)
+    protected override string Description => "We sorteren de lijst van games op basis van de hoeveelheid sales, en daarna het releasejaar";
+
+    protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        return games
+        var list = games
             .OrderBy(game => game.Sales)
+            .ThenBy(game => game.ReleaseYear)
             .ToList();
+        
+        DisplayData(list);
     }
 
-    public List<Game> WithMethod(List<Game> games)
+    protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var result =
+        var list = (
             from game in games
-            orderby game.Sales
-            select game;
+            orderby game.Sales, game.ReleaseYear
+            select game
+        ).ToList();
 
-        return result.ToList();
+        DisplayData(list);
     }
 }
