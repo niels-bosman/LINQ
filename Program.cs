@@ -9,9 +9,10 @@ Console.WriteLine("Welke LINQ functie wil je uitproberen? Opties: where, orderby
 
 LinqExample example = Console.ReadLine() switch
 {
-    "where"   => new WhereLinqExample(),
+    "where" => new WhereLinqExample(),
     "orderby" => new OrderByLinqExample(),
-    "select"  => new SelectLinqExample()
+    "select" => new SelectLinqExample(),
+    "selectmany" => new SelectManyLinqExample(),
 };
 
 Console.Clear();
