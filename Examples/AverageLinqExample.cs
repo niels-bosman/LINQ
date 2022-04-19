@@ -8,12 +8,8 @@ public class AverageLinqExample : LinqExample
     
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var average = (
-            from game in games
-            select game.ReleaseYear
-        ).Average();
-        
-        DisplayData(average);
+        // Skipped because not possible: https://stackoverflow.com/questions/17890729/how-can-i-write-take1-in-query-syntax
+        throw new NotImplementedException();
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)

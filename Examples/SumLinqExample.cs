@@ -8,12 +8,8 @@ public class SumLinqExample : LinqExample
     
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var least = (
-            from game in games
-            select game.Sales
-        ).Sum();
-        
-        DisplayData(least);
+        // Skipped because not possible: https://stackoverflow.com/questions/17890729/how-can-i-write-take1-in-query-syntax
+        throw new NotImplementedException();
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)

@@ -2,9 +2,9 @@
 
 namespace LINQ.Examples;
 
-public class CountLinqExample : LinqExample
+public class FirstLinqExample : LinqExample
 {
-    protected override string Description => "We tellen het aantal games waarvan de uitgever Riot Games is";
+    protected override string Description => "We selecteren de eerste game waarvan het genre 'Shooter' is";
     
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
@@ -14,13 +14,8 @@ public class CountLinqExample : LinqExample
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var amount = games.Count(game => game.GameStudio == "Riot Games");
+        var game = games.First(game => game.Genre == "Shooter");
         
-        DisplayData(amount);
-    }
-
-    private static void DisplayData(int amount)
-    {
-        Console.WriteLine($"Het aantal games: {amount}");
+        DisplayData(new List<Game> {game});
     }
 }

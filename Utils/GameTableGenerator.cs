@@ -6,17 +6,23 @@ public class GameTableGenerator
 {
     private const int TableWidth = 200;
 
-    public static void Generate(IEnumerable<Game> games)
+    public static void Generate(IEnumerable<Game?> games)
     {
         PrintLine();
         PrintRow("Naam", "Genre", "Releasejaar", "Studio", "Sales");
         PrintLine();
         foreach (var game in games)
         {
-            PrintRow(game.Name, game.Genre, game.ReleaseYear.ToString(), game.GameStudio, game.Sales.ToString("N0"));
+            if (game != null)
+            {
+                PrintRow(game.Name, game.Genre, game.ReleaseYear.ToString(), game.GameStudio, game.Sales.ToString("N0"));
+            }
+            else
+            {
+                PrintRow("null", "null", "null", "null", "null");
+            }
         }
         PrintLine();
-        Console.ReadLine();
     }
     
     private static void PrintLine()
