@@ -14,6 +14,10 @@ LinqExample example = Console.ReadLine() switch
     "select" => new SelectLinqExample(),
     "selectmany" => new SelectManyLinqExample(),
     "count" => new CountLinqExample(),
+    "min" => new MinLinqExample(),
+    "max" => new MaxLinqExample(),
+    "sum" => new SumLinqExample(),
+    "average" => new AverageLinqExample(),
 };
 
 Console.Clear();
