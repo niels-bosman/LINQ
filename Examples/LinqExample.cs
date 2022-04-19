@@ -28,10 +28,6 @@ public abstract class LinqExample
             case "query":
                 RunWithQuery(games);
                 break;
-            default:
-                Console.WriteLine("Je hebt iets verkeerds ingevult.");
-                Environment.Exit(0);
-                break;
         }
     }
 }

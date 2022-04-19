@@ -5,6 +5,7 @@ namespace LINQ.Examples;
 public class SelectManyLinqExample : LinqExample
 {
     protected override string Description => "We selecteren alle platforms van alle games.";
+    
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
         var list = games

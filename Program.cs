@@ -13,6 +13,7 @@ LinqExample example = Console.ReadLine() switch
     "orderby" => new OrderByLinqExample(),
     "select" => new SelectLinqExample(),
     "selectmany" => new SelectManyLinqExample(),
+    "count" => new CountLinqExample(),
 };
 
 Console.Clear();
