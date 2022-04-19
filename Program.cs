@@ -1,10 +1,8 @@
 ﻿using LINQ.Examples;
 using LINQ.Repositories;
 
-// Alle games ophalen
 var games = new GameRepository().GetGames();
 
-// LINQ functie vragen
 Console.WriteLine(
     "Welke LINQ functie wil je uitproberen? Opties: \n" +
     "- where \n" +
@@ -40,26 +38,18 @@ LinqExample example = Console.ReadLine() switch
     "min" => new MinLinqExample(),
     "max" => new MaxLinqExample(),
     "sum" => new SumLinqExample(),
-    "average" => new AverageLinqExample(),
+    "average" => new AverageLinqLinqExample(),
     "aggregate" => new AggregateLinqExample(),
     "skip" => new SkipLinqExample(),
     "take" => new TakeLinqExample(),
     "first" => new FirstLinqExample(),
     "firstordefault" => new FirstOrDefaultLinqExample(),
     "distinct" => new DistinctLinqExample(),
-    "custom" => new CustomLinqExample() // TODO
+    "custom" => new CustomLinqExample(), // TODO
 };
 
 Console.Clear();
 
-// LINQ Variant vragen
 Console.WriteLine("Welke variant daarvan wil je proberen? Opties: method, query");
 
-try
-{
-    example.Run(games);
-}
-catch (NotImplementedException)
-{
-    Console.WriteLine("Deze LINQ functie heeft niet deze implementatie.");
-}
+example.Run(games);

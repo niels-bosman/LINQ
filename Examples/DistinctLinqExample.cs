@@ -2,15 +2,9 @@
 
 namespace LINQ.Examples;
 
-public class DistinctLinqExample : LinqExample
+public class DistinctLinqExample : WithoutQuerySyntaxLinqExample
 {
-    protected override string? Description => "We tonen alle unieke Game studios";
-    
-    protected override void RunWithQuery(IEnumerable<Game> games)
-    {
-        // Skipped because not possible: https://stackoverflow.com/questions/17890729/how-can-i-write-take1-in-query-syntax
-        throw new NotImplementedException();
-    }
+    protected override string Description => "We tonen alle unieke Game studios";
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
