@@ -8,11 +8,10 @@ public class WhereLinqExample : LinqExample
 
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var list = (
+        var list =
             from game in games
             where game.ReleaseYear > 2017
-            select game
-        ).ToList();
+            select game;
 
         DisplayData(list);
     }

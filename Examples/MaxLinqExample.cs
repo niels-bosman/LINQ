@@ -8,9 +8,9 @@ public class MaxLinqExample: WithoutQuerySyntaxLinqExample
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var least = games.Max(game => game.Sales);
+        var most = games.Max(game => game.Sales);
         
-        DisplayData(least);
+        DisplayData(most);
     }
     
     private static void DisplayData(int least)

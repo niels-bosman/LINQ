@@ -18,8 +18,7 @@ public class SelectManyLinqExample : LinqExample
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var list = games
-            .SelectMany(game => game.Platforms);
+        var list = games.SelectMany(game => game.Platforms);
         
         DisplayData(list);
     }

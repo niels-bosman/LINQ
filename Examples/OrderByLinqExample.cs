@@ -8,11 +8,10 @@ public class OrderByLinqExample : LinqExample
 
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var list = (
+        var list =
             from game in games
             orderby game.Sales, game.ReleaseYear
-            select game
-        ).ToList();
+            select game;
         
         DisplayData(list);
     }

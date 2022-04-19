@@ -14,7 +14,7 @@ public abstract class LinqExample
 
     private void ShowDescription() => Console.WriteLine(Description);
 
-    protected static void DisplayData(IEnumerable<Game> games) => GameTableGenerator.Generate(games);
+    protected static void DisplayData(IEnumerable<Game?> games) => GameTableGenerator.Generate(games);
 
     public void Run(IEnumerable<Game> games)
     {

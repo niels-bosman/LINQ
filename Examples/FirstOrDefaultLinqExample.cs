@@ -8,9 +8,8 @@ public class FirstOrDefaultLinqExample : WithoutQuerySyntaxLinqExample
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var game = games
-            .FirstOrDefault(game => game.Genre == "Fighting");
-        
-        DisplayData(new List<Game> {game});
+        var game = games.FirstOrDefault(game => game.Genre == "Fighting");
+
+        DisplayData(new List<Game?> {game});
     }
 }
