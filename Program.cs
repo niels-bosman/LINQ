@@ -24,7 +24,8 @@ Console.WriteLine(
     "- take \n" +
     "- first \n" +
     "- firstordefault \n" +
-    "- distinct"
+    "- distinct \n" +
+    "- custom"
 );
 
 LinqExample example = Console.ReadLine() switch
@@ -45,7 +46,8 @@ LinqExample example = Console.ReadLine() switch
     "take" => new TakeLinqExample(),
     "first" => new FirstLinqExample(),
     "firstordefault" => new FirstOrDefaultLinqExample(),
-    "distinct" => new DistinctLinqExample()
+    "distinct" => new DistinctLinqExample(),
+    "custom" => new CustomLinqExample() // TODO
 };
 
 Console.Clear();
