@@ -8,18 +8,18 @@ public class SelectManyLinqExample : LinqExample
     
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var list = games
-            .SelectMany(game => game.Platforms);
+        var list = 
+            from game in games
+            from platform in game.Platforms
+            select platform;
         
         DisplayData(list);
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var list = 
-            from game in games
-            from platform in game.Platforms
-            select platform;
+        var list = games
+            .SelectMany(game => game.Platforms);
         
         DisplayData(list);
     }

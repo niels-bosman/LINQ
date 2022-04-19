@@ -8,17 +8,17 @@ public class SumLinqExample : LinqExample
     
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var least = games.Sum(game => game.Sales);
+        var least = (
+            from game in games
+            select game.Sales
+        ).Sum();
         
         DisplayData(least);
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var least = (
-            from game in games
-            select game.Sales
-        ).Sum();
+        var least = games.Sum(game => game.Sales);
         
         DisplayData(least);
     }

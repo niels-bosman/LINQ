@@ -8,17 +8,17 @@ public class AverageLinqExample : LinqExample
     
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var average = games.Average(game => game.ReleaseYear);
+        var average = (
+            from game in games
+            select game.ReleaseYear
+        ).Average();
         
         DisplayData(average);
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var average = (
-            from game in games
-            select game.ReleaseYear
-        ).Average();
+        var average = games.Average(game => game.ReleaseYear);
         
         DisplayData(average);
     }

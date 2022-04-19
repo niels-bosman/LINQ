@@ -5,7 +5,7 @@ using LINQ.Repositories;
 var games = new GameRepository().GetGames();
 
 // LINQ functie vragen
-Console.WriteLine("Welke LINQ functie wil je uitproberen? Opties: where, orderby, select, selectmany, join, groupby, count, min, max, sum, average, skip, take, first, firstordefault");
+Console.WriteLine("Welke LINQ functie wil je uitproberen? Opties: where, orderby, select, selectmany, join, groupby, count, min, max, sum, average, aggregate, skip, take, first, firstordefault");
 
 LinqExample example = Console.ReadLine() switch
 {
@@ -18,6 +18,7 @@ LinqExample example = Console.ReadLine() switch
     "max" => new MaxLinqExample(),
     "sum" => new SumLinqExample(),
     "average" => new AverageLinqExample(),
+    "aggregate" => new AggregateLinqExample(),
 };
 
 Console.Clear();

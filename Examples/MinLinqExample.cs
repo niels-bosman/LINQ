@@ -8,17 +8,17 @@ public class MinLinqExample : LinqExample
     
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var least = games.Min(game => game.Sales);
+        var least = (
+            from game in games
+            select game.Sales
+        ).Min();
         
         DisplayData(least);
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var least = (
-            from game in games
-            select game.Sales
-        ).Min();
+        var least = games.Min(game => game.Sales);
         
         DisplayData(least);
     }

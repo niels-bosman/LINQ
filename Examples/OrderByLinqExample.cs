@@ -8,22 +8,22 @@ public class OrderByLinqExample : LinqExample
 
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var list = games
-            .OrderBy(game => game.Sales)
-            .ThenBy(game => game.ReleaseYear)
-            .ToList();
+        var list = (
+            from game in games
+            orderby game.Sales, game.ReleaseYear
+            select game
+        ).ToList();
         
         DisplayData(list);
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var list = (
-            from game in games
-            orderby game.Sales, game.ReleaseYear
-            select game
-        ).ToList();
-
+        var list = games
+            .OrderBy(game => game.Sales)
+            .ThenBy(game => game.ReleaseYear)
+            .ToList();
+        
         DisplayData(list);
     }
 }

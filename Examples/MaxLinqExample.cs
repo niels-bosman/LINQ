@@ -8,17 +8,17 @@ public class MaxLinqExample: LinqExample
     
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var least = games.Max(game => game.Sales);
+        var least = (
+            from game in games
+            select game.Sales
+        ).Max();
         
         DisplayData(least);
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var least = (
-            from game in games
-            select game.Sales
-        ).Max();
+        var least = games.Max(game => game.Sales);
         
         DisplayData(least);
     }

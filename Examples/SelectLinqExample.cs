@@ -8,19 +8,19 @@ public class SelectLinqExample : LinqExample
 
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
-        var list = games
-            .Select(game => game.Sales / 100)
-            .ToList();
+        var list = (
+            from game in games
+            select game.Sales / 100
+        ).ToList();
         
         DisplayData(list);
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
-        var list = (
-            from game in games
-            select game.Sales / 100
-        ).ToList();
+        var list = games
+            .Select(game => game.Sales / 100)
+            .ToList();
         
         DisplayData(list);
     }
