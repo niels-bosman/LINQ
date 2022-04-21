@@ -6,10 +6,10 @@ public class FirstOrDefaultExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We selecteren de eerste game waar het genre 'Fighting' is";
 
-    protected override void RunWithMethod()
+    protected override void RunMethodVariant()
     {
         var game = Games.FirstOrDefault(game => game.Genre == "Fighting");
 
-        DisplayData(new List<Game?> {game});
+        Display(new List<Game?> {game});
     }
 }

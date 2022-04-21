@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using LINQ.Models;
+﻿using LINQ.Models;
 using LINQ.Utils;
 
 namespace LINQ.Examples;
@@ -10,13 +9,13 @@ public abstract class Example
     
     protected IEnumerable<Game> Games { get; set; }
 
-    protected abstract void RunWithQuery();
+    protected abstract void RunQueryVariant();
 
-    protected abstract void RunWithMethod();
+    protected abstract void RunMethodVariant();
 
     private void ShowDescription() => Console.WriteLine(Description);
 
-    protected static void DisplayData(IEnumerable<Game?> games) => GameTableGenerator.Generate(games);
+    protected static void Display(IEnumerable<Game?> games) => GameTableGenerator.Generate(games);
 
     public void Run(string? type, IEnumerable<Game> games)
     {
@@ -26,10 +25,10 @@ public abstract class Example
         switch (type)
         {
             case "method":
-                RunWithMethod();
+                RunMethodVariant();
                 break;
             case "query":
-                RunWithQuery();
+                RunQueryVariant();
                 break;
         }
     }

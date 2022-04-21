@@ -1,19 +1,17 @@
-﻿using LINQ.Models;
-
-namespace LINQ.Examples;
+﻿namespace LINQ.Examples;
 
 public class MinExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We zoeken de game met de minste sales.";
 
-    protected override void RunWithMethod()
+    protected override void RunMethodVariant()
     {
         var least = Games.Min(game => game.Sales);
         
-        DisplayData(least);
+        Display(least);
     }
     
-    private static void DisplayData(int least)
+    private static void Display(int least)
     {
         Console.WriteLine($"De minste sales: {least}");
     }

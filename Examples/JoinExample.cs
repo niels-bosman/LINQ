@@ -1,17 +1,15 @@
-﻿using LINQ.Models;
-
-namespace LINQ.Examples;
+﻿namespace LINQ.Examples;
 
 public class JoinExample : Example
 {
     protected override string? Description { get; }
     
-    protected override void RunWithQuery()
+    protected override void RunQueryVariant()
     {
         throw new NotImplementedException();
     }
 
-    protected override void RunWithMethod()
+    protected override void RunMethodVariant()
     {
         throw new NotImplementedException();
     }

@@ -4,25 +4,25 @@ public class SelectExample : Example
 {
     protected override string Description => "We halen selecteren alle sales en delen ze door 100.";
 
-    protected override void RunWithQuery()
+    protected override void RunQueryVariant()
     {
         var list =
             from game in Games
             select game.Sales / 100;
 
-        DisplayData(list);
+        Display(list);
     }
 
-    protected override void RunWithMethod()
+    protected override void RunMethodVariant()
     {
         var list = Games
             .Select(game => game.Sales / 100)
             .ToList();
         
-        DisplayData(list);
+        Display(list);
     }
 
-    private static void DisplayData(IEnumerable<int> sales)
+    private static void Display(IEnumerable<int> sales)
     {
         foreach (var sale in sales)
         {

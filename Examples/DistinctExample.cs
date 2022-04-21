@@ -4,16 +4,16 @@ public class DistinctExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We tonen alle unieke Game studios";
 
-    protected override void RunWithMethod()
+    protected override void RunMethodVariant()
     {
         var list = Games
             .Select(game => game.GameStudio)
             .Distinct();
         
-        DisplayData(list);
+        Display(list);
     }
     
-    private static void DisplayData(IEnumerable<string?> studios)
+    private static void Display(IEnumerable<string?> studios)
     {
         foreach (var studio in studios)
         {

@@ -6,24 +6,24 @@ public class SelectManyExample : Example
 {
     protected override string Description => "We selecteren alle platforms van alle games.";
     
-    protected override void RunWithQuery()
+    protected override void RunQueryVariant()
     {
         var list = 
             from game in Games
             from platform in game.Platforms
             select platform;
         
-        DisplayData(list);
+        Display(list);
     }
 
-    protected override void RunWithMethod()
+    protected override void RunMethodVariant()
     {
         var list = Games.SelectMany(game => game.Platforms);
         
-        DisplayData(list);
+        Display(list);
     }
 
-    private static void DisplayData(IEnumerable<Platform> platforms)
+    private static void Display(IEnumerable<Platform> platforms)
     {
         foreach (var platform in platforms)
         {

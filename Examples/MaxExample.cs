@@ -1,19 +1,17 @@
-﻿using LINQ.Models;
-
-namespace LINQ.Examples;
+﻿namespace LINQ.Examples;
 
 public class MaxExample: WithoutQuerySyntaxExample
 {
     protected override string Description => "We zoeken de game met de meeste sales.";
 
-    protected override void RunWithMethod()
+    protected override void RunMethodVariant()
     {
         var most = Games.Max(game => game.Sales);
         
-        DisplayData(most);
+        Display(most);
     }
     
-    private static void DisplayData(int least)
+    private static void Display(int least)
     {
         Console.WriteLine($"De meeste sales: {least}");
     }
