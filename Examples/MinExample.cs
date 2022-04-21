@@ -6,9 +6,9 @@ public class MinExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We zoeken de game met de minste sales.";
 
-    protected override void RunWithMethod(IEnumerable<Game> games)
+    protected override void RunWithMethod()
     {
-        var least = games.Min(game => game.Sales);
+        var least = Games.Min(game => game.Sales);
         
         DisplayData(least);
     }

@@ -1,23 +1,21 @@
-﻿using LINQ.Models;
-
-namespace LINQ.Examples;
+﻿namespace LINQ.Examples;
 
 public class SelectExample : Example
 {
     protected override string Description => "We halen selecteren alle sales en delen ze door 100.";
 
-    protected override void RunWithQuery(IEnumerable<Game> games)
+    protected override void RunWithQuery()
     {
         var list =
-            from game in games
+            from game in Games
             select game.Sales / 100;
 
         DisplayData(list);
     }
 
-    protected override void RunWithMethod(IEnumerable<Game> games)
+    protected override void RunWithMethod()
     {
-        var list = games
+        var list = Games
             .Select(game => game.Sales / 100)
             .ToList();
         

@@ -7,10 +7,12 @@ namespace LINQ.Examples;
 public abstract class Example
 {
     protected abstract string? Description { get; }
+    
+    protected IEnumerable<Game> Games { get; set; }
 
-    protected abstract void RunWithQuery(IEnumerable<Game> games);
+    protected abstract void RunWithQuery();
 
-    protected abstract void RunWithMethod(IEnumerable<Game> games);
+    protected abstract void RunWithMethod();
 
     private void ShowDescription() => Console.WriteLine(Description);
 
@@ -18,15 +20,16 @@ public abstract class Example
 
     public void Run(string? type, IEnumerable<Game> games)
     {
+        Games = games;
         ShowDescription();
 
         switch (type)
         {
             case "method":
-                RunWithMethod(games);
+                RunWithMethod();
                 break;
             case "query":
-                RunWithQuery(games);
+                RunWithQuery();
                 break;
         }
     }

@@ -6,9 +6,9 @@ public class FirstOrDefaultExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We selecteren de eerste game waar het genre 'Fighting' is";
 
-    protected override void RunWithMethod(IEnumerable<Game> games)
+    protected override void RunWithMethod()
     {
-        var game = games.FirstOrDefault(game => game.Genre == "Fighting");
+        var game = Games.FirstOrDefault(game => game.Genre == "Fighting");
 
         DisplayData(new List<Game?> {game});
     }

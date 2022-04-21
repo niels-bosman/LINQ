@@ -1,14 +1,12 @@
-﻿using LINQ.Models;
-
-namespace LINQ.Examples;
+﻿namespace LINQ.Examples;
 
 public class SumExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We berekenen de totale sales van alle games bij elkaar.";
 
-    protected override void RunWithMethod(IEnumerable<Game> games)
+    protected override void RunWithMethod()
     {
-        var least = games.Sum(game => game.Sales);
+        var least = Games.Sum(game => game.Sales);
         
         DisplayData(least);
     }

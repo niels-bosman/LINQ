@@ -1,14 +1,12 @@
-﻿using LINQ.Models;
-
-namespace LINQ.Examples;
+﻿namespace LINQ.Examples;
 
 public class DistinctExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We tonen alle unieke Game studios";
 
-    protected override void RunWithMethod(IEnumerable<Game> games)
+    protected override void RunWithMethod()
     {
-        var list = games
+        var list = Games
             .Select(game => game.GameStudio)
             .Distinct();
         

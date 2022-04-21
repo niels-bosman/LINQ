@@ -1,14 +1,12 @@
-﻿using LINQ.Models;
-
-namespace LINQ.Examples;
+﻿namespace LINQ.Examples;
 
 public class CountExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We tellen het aantal games waarvan de uitgever Riot Games is";
 
-    protected override void RunWithMethod(IEnumerable<Game> games)
+    protected override void RunWithMethod()
     {
-        var amount = games.Count(game => game.GameStudio == "Riot Games");
+        var amount = Games.Count(game => game.GameStudio == "Riot Games");
         
         DisplayData(amount);
     }

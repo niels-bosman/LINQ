@@ -6,9 +6,9 @@ public class MaxExample: WithoutQuerySyntaxExample
 {
     protected override string Description => "We zoeken de game met de meeste sales.";
 
-    protected override void RunWithMethod(IEnumerable<Game> games)
+    protected override void RunWithMethod()
     {
-        var most = games.Max(game => game.Sales);
+        var most = Games.Max(game => game.Sales);
         
         DisplayData(most);
     }

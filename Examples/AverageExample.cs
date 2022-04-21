@@ -6,9 +6,9 @@ public class AverageExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We bekijken het gemiddelde releasejaar van alle games.";
 
-    protected override void RunWithMethod(IEnumerable<Game> games)
+    protected override void RunWithMethod()
     {
-        var average = games.Average(game => game.ReleaseYear);
+        var average = Games.Average(game => game.ReleaseYear);
         
         DisplayData(average);
     }
