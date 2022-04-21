@@ -2,7 +2,7 @@
 
 namespace LINQ.Utils;
 
-public class GameTableGenerator
+public static class GameTableGenerator
 {
     private const int TableWidth = 200;
 
@@ -15,7 +15,7 @@ public class GameTableGenerator
         {
             if (game != null)
             {
-                PrintRow(game.Name, game.Genre, game.ReleaseYear.ToString(), game.GameStudio, game.Sales.ToString("N0"));
+                PrintRow(game.Name!, game.Genre!, game.ReleaseYear.ToString(), game.GameStudio!, game.Sales.ToString("N0"));
             }
             else
             {

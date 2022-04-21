@@ -2,8 +2,8 @@
 
 public class OuterJoinExample : Example
 {
-    protected override string? Description { get; }
-    
+    protected override string? Description => "TODO";
+
     protected override void RunQueryVariant()
     {
         throw new NotImplementedException();

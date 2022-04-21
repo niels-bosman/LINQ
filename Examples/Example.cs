@@ -6,8 +6,8 @@ namespace LINQ.Examples;
 public abstract class Example
 {
     protected abstract string? Description { get; }
-    
-    protected IEnumerable<Game> Games { get; set; }
+
+    protected IEnumerable<Game> Games { get; private set; } = new List<Game>();
 
     protected abstract void RunQueryVariant();
 

@@ -10,7 +10,7 @@ public class SelectManyExample : Example
     {
         var list = 
             from game in Games
-            from platform in game.Platforms
+            from platform in game.Platforms!
             select platform;
         
         Display(list);
@@ -18,7 +18,7 @@ public class SelectManyExample : Example
 
     protected override void RunMethodVariant()
     {
-        var list = Games.SelectMany(game => game.Platforms);
+        var list = Games.SelectMany(game => game.Platforms!);
         
         Display(list);
     }
@@ -36,6 +36,7 @@ public class SelectManyExample : Example
                 Platform.Ps4 => "Playstation 4",
                 Platform.Ps5 => "Playstation 5",
                 Platform.NintendoSwitch => "Nintendo Switch",
+                _ => "",
             };
             
             Console.WriteLine(name);

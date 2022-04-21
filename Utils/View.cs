@@ -2,7 +2,7 @@
 
 namespace LINQ.Utils;
 
-public class View
+public static class View
 {
     public static Example AskExample()
     {
@@ -54,6 +54,7 @@ public class View
             "firstordefault" => new FirstOrDefaultExample(),
             "distinct" => new DistinctExample(),
             "custom" => new CustomExample(), // TODO
+            _ => throw new ArgumentOutOfRangeException()
         };
         
         Console.Clear();
