@@ -2,7 +2,7 @@
 
 namespace LINQ.Examples;
 
-public class DistinctLinqExample : WithoutQuerySyntaxLinqExample
+public class DistinctExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We tonen alle unieke Game studios";
 

@@ -2,9 +2,10 @@
 
 namespace LINQ.Examples;
 
-public class CustomLinqExample : LinqExample
+public class CustomExample : Example
 {
     protected override string? Description { get; }
+    
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
         throw new NotImplementedException();

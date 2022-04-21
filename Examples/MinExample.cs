@@ -2,7 +2,7 @@
 
 namespace LINQ.Examples;
 
-public class MinLinqExample : WithoutQuerySyntaxLinqExample
+public class MinExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We zoeken de game met de minste sales.";
 

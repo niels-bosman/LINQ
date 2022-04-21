@@ -2,7 +2,7 @@
 
 namespace LINQ.Examples;
 
-public class AggregateLinqExample : WithoutQuerySyntaxLinqExample
+public class AggregateExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We zoeken de game met de langste naam";
 

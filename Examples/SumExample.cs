@@ -2,7 +2,7 @@
 
 namespace LINQ.Examples;
 
-public class SumLinqExample : WithoutQuerySyntaxLinqExample
+public class SumExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We berekenen de totale sales van alle games bij elkaar.";
 

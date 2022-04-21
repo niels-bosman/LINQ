@@ -2,7 +2,7 @@
 
 namespace LINQ.Examples;
 
-public class SelectLinqExample : LinqExample
+public class SelectExample : Example
 {
     protected override string Description => "We halen selecteren alle sales en delen ze door 100.";
 

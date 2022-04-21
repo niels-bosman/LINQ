@@ -4,7 +4,7 @@ using LINQ.Utils;
 
 namespace LINQ.Examples;
 
-public abstract class LinqExample
+public abstract class Example
 {
     protected abstract string? Description { get; }
 
@@ -16,10 +16,8 @@ public abstract class LinqExample
 
     protected static void DisplayData(IEnumerable<Game?> games) => GameTableGenerator.Generate(games);
 
-    public void Run(IEnumerable<Game> games)
+    public void Run(string? type, IEnumerable<Game> games)
     {
-        var type = Console.ReadLine();
-        Console.Clear();
         ShowDescription();
 
         switch (type)

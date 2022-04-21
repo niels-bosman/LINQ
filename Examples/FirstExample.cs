@@ -2,7 +2,7 @@
 
 namespace LINQ.Examples;
 
-public class FirstLinqExample : WithoutQuerySyntaxLinqExample
+public class FirstExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We selecteren de eerste game waarvan het genre 'Shooter' is";
 

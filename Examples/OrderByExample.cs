@@ -2,26 +2,27 @@
 
 namespace LINQ.Examples;
 
-public class WhereLinqExample : LinqExample
+public class OrderByExample : Example
 {
-    protected override string Description => "We filteren de games die nieuwe zijn dan 2017";
+    protected override string Description => "We sorteren de lijst van games op basis van de hoeveelheid sales, en daarna het releasejaar";
 
     protected override void RunWithQuery(IEnumerable<Game> games)
     {
         var list =
             from game in games
-            where game.ReleaseYear > 2017
+            orderby game.Sales, game.ReleaseYear
             select game;
-
+        
         DisplayData(list);
     }
 
     protected override void RunWithMethod(IEnumerable<Game> games)
     {
         var list = games
-            .Where(game => game.ReleaseYear > 2017)
+            .OrderBy(game => game.Sales)
+            .ThenBy(game => game.ReleaseYear)
             .ToList();
-
+        
         DisplayData(list);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace LINQ.Examples;
 
-public class TakeLinqExample : WithoutQuerySyntaxLinqExample
+public class TakeExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We orderen de lijst op basis van sales en pakken de top 3";
 

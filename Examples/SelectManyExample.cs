@@ -2,7 +2,7 @@ using LINQ.Models;
 
 namespace LINQ.Examples;
 
-public class SelectManyLinqExample : LinqExample
+public class SelectManyExample : Example
 {
     protected override string Description => "We selecteren alle platforms van alle games.";
     

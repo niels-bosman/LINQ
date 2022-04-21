@@ -2,7 +2,7 @@
 
 namespace LINQ.Examples;
 
-public class CountLinqExample : WithoutQuerySyntaxLinqExample
+public class CountExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We tellen het aantal games waarvan de uitgever Riot Games is";
 

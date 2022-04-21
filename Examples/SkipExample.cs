@@ -2,7 +2,7 @@
 
 namespace LINQ.Examples;
 
-public class SkipLinqExample : WithoutQuerySyntaxLinqExample
+public class SkipExample : WithoutQuerySyntaxExample
 {
     protected override string Description => "We slaan de eerste twee games over in de lijst.";
 
