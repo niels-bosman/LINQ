@@ -8,15 +8,15 @@ public class GroupByExample : Example
 
     protected override void RunQueryVariant()
     {
-        var list = (
+        var list =
             from game in Games
-            group game by game.Genre into merge
+            group game by game.Genre
+            into merge
             select new GroupByModel
             {
                 Games = merge.ToList(),
                 Genre = merge.Key,
-            }
-        );
+            };
         
         Display(list);
     }
@@ -40,6 +40,8 @@ public class GroupByExample : Example
         foreach (var listItem in list)
         {
             Console.WriteLine($"Genre: {listItem.Genre}");
+
+            if (listItem.Games  == null) break;
             
             foreach (var game in listItem.Games)
             {

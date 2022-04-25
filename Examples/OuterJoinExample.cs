@@ -2,7 +2,7 @@
 
 public class OuterJoinExample : Example
 {
-    protected override string Description => "TODO";
+    protected override string Description => "We joinen de games met de game studio en voegen de locatie van de headquarters toe achter de naam van de studio. Zoals je ziet blijven de niet gematchte waardes.";
 
     protected override void RunQueryVariant()
     {
@@ -43,7 +43,7 @@ public class OuterJoinExample : Example
         foreach (var item in list)
         {
             Console.WriteLine(item.Game);
-            Console.WriteLine($"Gemaakt door: {item?.Studio}");
+            Console.WriteLine($"Gemaakt door: {item.Studio}");
             Console.WriteLine("");
         }
     }
