@@ -1,4 +1,4 @@
-﻿using LINQ.Models;
+﻿using LINQ.Models.Custom;
 
 namespace LINQ.Examples;
 

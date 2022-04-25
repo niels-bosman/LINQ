@@ -47,12 +47,6 @@ public class GameStudioRepository
                 YearFounded = 1991,
             },
             new() {
-                Name = "Epic Games",
-                Employees = 6614,
-                Headquarters = "Cary",
-                YearFounded = 1991,
-            },
-            new() {
                 Name = "Game Freak",
                 Employees = 6614,
                 Headquarters = "Chiyoda",

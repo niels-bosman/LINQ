@@ -1,6 +1,4 @@
-﻿using LINQ.Models;
-
-namespace LINQ.Examples;
+﻿namespace LINQ.Examples;
 
 public class JoinExample : Example
 {
@@ -8,21 +6,21 @@ public class JoinExample : Example
 
     protected override void RunQueryVariant()
     {
-        var list = (
+        var list =
             from game in Games
-            join gameStudio in GameStudios on game.GameStudio equals gameStudio.Name
-            select new Game
+            join gameStudio in GameStudios on game.GameStudio equals gameStudio?.Name
+            select new
             {
-                Name = game.Name,
-                Genre = game.Genre,
-                Platforms = game.Platforms,
-                Sales = game.Sales,
-                GameStudio = $"{gameStudio.Name} - {gameStudio.Headquarters}",
-                ReleaseYear = game.ReleaseYear,
-            }
-        );
-        
-        Display(list);
+                Game = game.Name,
+                Studio = $"{game.GameStudio} - {gameStudio.Headquarters}",
+            };
+
+        foreach (var item in list)
+        {
+            Console.WriteLine(item.Game);
+            Console.WriteLine($"Gemaakt door: {item.Studio}");
+            Console.WriteLine("");
+        }
     }
 
     protected override void RunMethodVariant()
@@ -31,17 +29,18 @@ public class JoinExample : Example
             GameStudios,
             game => game.GameStudio,
             gameStudio => gameStudio.Name,
-            (game, gameStudio) => new Game
+            (game, gameStudio) => new
             {
-                Name = game.Name,
-                Genre = game.Genre,
-                Platforms = game.Platforms,
-                Sales = game.Sales,
-                GameStudio = $"{gameStudio.Name} - {gameStudio.Headquarters}",
-                ReleaseYear = game.ReleaseYear,
+                Game = game.Name,
+                Studio = $"{gameStudio.Name} - {gameStudio.Headquarters}",
             }
         );
         
-        Display(list);
+        foreach (var item in list)
+        {
+            Console.WriteLine(item.Game);
+            Console.WriteLine($"Gemaakt door: {item.Studio}");
+            Console.WriteLine("");
+        }
     }
 }

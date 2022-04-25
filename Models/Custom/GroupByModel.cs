@@ -1,4 +1,4 @@
-﻿namespace LINQ.Models;
+﻿namespace LINQ.Models.Custom;
 
 public class GroupByModel
 {

@@ -40,7 +40,7 @@ public static class View
             "select" => new SelectExample(),
             "selectmany" => new SelectManyExample(),
             "join" => new JoinExample(),
-            "outerjoin" => new OuterJoinExample(), // TODO
+            "outerjoin" => new OuterJoinExample(),
             "groupby" => new GroupByExample(),
             "count" => new CountExample(),
             "min" => new MinExample(),
