@@ -15,9 +15,7 @@ public class SelectExample : Example
 
     protected override void RunMethodVariant()
     {
-        var list = Games
-            .Select(game => game.Sales / 100)
-            .ToList();
+        var list = Games.Select(game => game.Sales / 100);
         
         Display(list);
     }

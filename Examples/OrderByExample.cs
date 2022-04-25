@@ -18,8 +18,7 @@ public class OrderByExample : Example
     {
         var list = Games
             .OrderBy(game => game.Sales)
-            .ThenBy(game => game.ReleaseYear)
-            .ToList();
+            .ThenBy(game => game.ReleaseYear);
         
         Display(list);
     }

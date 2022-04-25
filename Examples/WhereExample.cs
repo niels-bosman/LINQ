@@ -16,9 +16,7 @@ public class WhereExample : Example
 
     protected override void RunMethodVariant()
     {
-        var list = Games
-            .Where(game => game.ReleaseYear > 2017)
-            .ToList();
+        var list = Games.Where(game => game.ReleaseYear > 2017);
 
         Display(list);
     }
