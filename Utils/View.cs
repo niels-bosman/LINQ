@@ -41,7 +41,7 @@ public static class View
             "selectmany" => new SelectManyExample(),
             "join" => new JoinExample(),
             "outerjoin" => new OuterJoinExample(), // TODO
-            "groupby" => new GroupByExample(), // TODO
+            "groupby" => new GroupByExample(),
             "count" => new CountExample(),
             "min" => new MinExample(),
             "max" => new MaxExample(),
