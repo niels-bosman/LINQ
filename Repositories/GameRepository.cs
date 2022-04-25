@@ -146,6 +146,30 @@ public class GameRepository
                     Platform.XboxOne
                 }
             },
+            new()
+            {
+                Name = "Pokémon Legends: Arceus",
+                Sales = 645000,
+                Genre = "Open world",
+                GameStudio = "Game Freak",
+                ReleaseYear = 2022,
+                Platforms = new List<Platform>
+                {
+                    Platform.NintendoSwitch,
+                }
+            },
+            new()
+            {
+                Name = "Kirby en de Vergeten Wereld",
+                Sales = 320000,
+                Genre = "Platformspel",
+                GameStudio = "HAL Laboratory",
+                ReleaseYear = 2022,
+                Platforms = new List<Platform>
+                {
+                    Platform.NintendoSwitch,
+                }
+            },
         };
     }
     
