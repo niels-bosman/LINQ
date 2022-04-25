@@ -39,7 +39,7 @@ public static class View
             "orderby" => new OrderByExample(),
             "select" => new SelectExample(),
             "selectmany" => new SelectManyExample(),
-            "join" => new JoinExample(), // TODO
+            "join" => new JoinExample(),
             "outerjoin" => new OuterJoinExample(), // TODO
             "groupby" => new GroupByExample(), // TODO
             "count" => new CountExample(),
@@ -53,7 +53,7 @@ public static class View
             "first" => new FirstExample(),
             "firstordefault" => new FirstOrDefaultExample(),
             "distinct" => new DistinctExample(),
-            "custom" => new CustomExample(), // TODO
+            "custom" => new CustomExample(),
             _ => throw new ArgumentOutOfRangeException()
         };
         

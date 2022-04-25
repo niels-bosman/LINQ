@@ -163,7 +163,7 @@ public class GameRepository
                 Name = "Kirby en de Vergeten Wereld",
                 Sales = 320000,
                 Genre = "Platformspel",
-                GameStudio = "HAL Laboratory",
+                GameStudio = "Game Freak",
                 ReleaseYear = 2022,
                 Platforms = new List<Platform>
                 {
